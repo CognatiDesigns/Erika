@@ -1,0 +1,298 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:grey;
+  margin:0;
+  padding:0;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 1.5em;
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+}
+
+#landingpage{
+  background-image: url('../img/erika1.jpg');
+  height:100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  padding: 0 20;
+}
+
+h1{
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: normal;
+  font-weight: thin;
+}
+
+/* NAV MENU AND HEADER ELEMENTS */
+
+.button{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: .75em;
+  color: lightgrey;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: solid lightgrey;
+  padding: 10px 20px;
+  border-radius: 10px
+}
+
+.button:hover{
+  color:lightgrey;
+}
+
+nav{
+  z-index: 1;
+  font-size:1.25em;
+  background: rgba(0, 0, 0, 0.0);
+  position: fixed;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1%;
+  display: flex;
+}
+
+#branding{
+  position: absolute;
+  left:0px;
+  display: inline-block;
+  font-size:1.25em;
+}
+
+.icon{
+  height:36px;
+  width:36px;
+}
+#icons{
+  padding:1%;
+  position:absolute;
+  right:2%;
+  display: inline-block;
+}
+
+nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+nav li{
+  display: inline-block;
+  margin-left: 2.0em;
+  padding-top: 12px;
+
+position: relative;
+}
+
+nav a{
+  color: lightgrey;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .75em;
+  margin-top: 15px;
+}
+
+nav a:hover{
+  color: lightgrey;
+
+}
+
+nav a::before{
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color:lightgrey;
+
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+
+  transition: all ease-in-out 300ms;
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+
+#icons a:hover::before{
+  width: 0%;
+}
+
+
+
+
+
+/*_____________________________________________________________________________________________________________
+
+/* MAIN BODY ELEMENTS */
+
+#aboutMe{
+  display:inline;
+  position: absolute;
+  color:lightgrey;
+  font-size:.90em;
+  background-color:rgba(0, 0, 0, 0.5);
+  height:89vh;
+  width:90%;
+}
+
+#bio{
+  font-size:0.90em;
+  padding:2%;
+  width:50%;
+}
+
+#portfolio{
+  align-content: center;
+  overflow-y: scroll;
+  display:none;
+  position: absolute;
+  color:lightgrey;
+  font-size:.90em;
+  background-color:rgba(0, 0, 0, 0.5);
+  height:89vh;
+  width:90%;
+}
+
+#considerations{
+  display:none;
+  position: absolute;
+  color:lightgrey;
+  font-size:.90em;
+  background-color:rgba(0, 0, 0, 0.5);
+  height:89vh;
+  width:90%;
+}
+
+#prices{
+  float:left;
+  padding:2%;
+  height:90%;
+  width:45%;
+}
+
+#considerationsPic{
+  padding:1%;
+  float:right;
+  height: 95%;
+  width:40%;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#prices ul{
+  list-style: none;
+}
+
+#priceList{
+  text-align:center;
+  padding:1%;
+  border-style:solid;
+  border-width:1px;
+}
+
+#priceTerms{
+  padding:1%;
+}
+
+#schedule{
+  display:none;
+  position: absolute;
+  color:lightgrey;
+  font-size:.90em;
+  background-color:rgba(0, 0, 0, 0.5);
+  height:89vh;
+  width:90%;
+}
+
+#contactMe{
+  display:none;
+  position: absolute;
+  color:lightgrey;
+  font-size:.90em;
+  background-color:rgba(0, 0, 0, 0.5);
+  height:89vh;
+  width:90%;
+}
+
+
+footer{
+  font-size:0.5em;
+  color:darkgrey;
+  width:100%;
+  background-color:rgba(0, 0, 0, 0.0);
+  position:absolute;
+  bottom:2px;
+}
+
+
+/* OVERLAY ELEMENTS _________________________________________________________________________________________________ */
+
+#snapchatOverlay{
+  display:none;
+  position: absolute;
+  color:lightgrey;
+  font-size:.90em;
+  background-color:rgba(0, 0, 0, 0.5);
+  height:85vh;
+  width:90%;
+}
+
+
+/* GALLERY ELEMENTS __________________________________________________________________________________________________ */
+@media (max-width: 1200px) {
+  #portfolio {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #portfolio {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #portfolio {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #portfolio {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+
+div.gallery {
+  margin-left:1%;
+  padding:0.25%;
+  float: right;
+  width: 15%;
+  height:auto;
+}
+
+div.gallery:hover {
+  border: 3px solid rgba(119, 119, 119, 0);
+}
+
+div.gallery img {
+  width: 100%;
+  height: 100%;
+}
